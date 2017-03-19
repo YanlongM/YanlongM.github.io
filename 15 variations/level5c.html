@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fifteen</title>
+  </head>
+
+  <style media="screen">
+  .home{
+
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+    border: 1px solid;
+  }
+  .home:hover
+  {
+    background-color: white;
+  }
+  body{
+    background-image: url(http://gph.to/2mWAGvQ);
+  }
+  .acne{
+
+	/* Set a counter named cnt to 0 */
+	counter-reset: cnt;
+
+	position:relative;
+	text-align:center;
+  font-size: 25px;
+	padding:20px 0;
+	width:420px;
+	height: 700px;
+	margin: 0 auto;
+}
+
+/* You can style pseudo elements and give them content,
+   as if they were real elements on the page */
+
+.acne::before{
+	display: block;
+	content:'THE EDENSPIEKERMANN MANIFESTO:';
+	font-size:20px;
+	font-weight:bold;
+	text-align:center;
+	padding:15px;
+  color: white;
+}
+
+.acne span{
+	display:inline-block;
+	padding:2px 6px;
+	background-color:black;
+	color:white;
+	border-radius:4px;
+	margin:3px;
+	cursor:default;
+}
+
+/* Create a counter with a pseudo element */
+
+.acne span::after{
+
+	/* Every time this rule is executed, the
+	   counter value is increased by 1 */
+	counter-increment: cnt;
+
+	/* Add the counter value as part of the content */
+	content:" #" counter(cnt);
+
+	display:inline-block;
+	padding:10px;
+}
+
+/* Pseudo elements can even access attributes of their parent element */
+
+.acne span::before{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	content:attr(data-title);
+	color:white;
+
+	opacity:0;
+
+	/* Animate the transitions */
+	-webkit-transition:opacity 0.4s;
+	transition:opacity 0.4s;
+}
+
+.acne span:hover::before{
+	opacity:1;
+}
+
+  </style>
+  <body>
+
+    <div class="home">
+      <a href="index.html">Let's go home</a></div><br><br>
+	<br>
+
+  <div class="acne">
+		<span data-title="Good work is not enough;We need to do great work.">We don't do good work.</span>
+
+			<span data-title="That may mean throwing out the old toolbox.">We invent new tools.</span>
+				<span data-title="Share your experiences, ideas, failures, successes.">We need inspiration to inspire.  </span>
+					<span data-title="Failureis part of the process.">We tolerate failure. </span>
+						<span data-title="Collaboration does not mean consensus.">We collaborate.  </span>
+							<span data-title="Idea generation is not idea selection.">We generate ideas.  </span>
+								<span data-title="Useful, beautiful, important things.">We like making stuff.  </span>
+									<span data-title="Saying yes is often just laziness.">We dare say no.  </span>
+										<span data-title="We have to mistrust our own routines.">We like surprises.  </span>
+											<span data-title="If something can be done better, don't wait for permission.">It's your company, too. </span></div>
+
+  </body>
+</html>
