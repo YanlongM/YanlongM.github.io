@@ -121,7 +121,11 @@ background-color: white;
 
 .inner {
   overflow: scroll;
+  overflow-x:hidden;
   position: absolute;
+}
+.inner::-webkit-scrollbar {
+    display: none;  // Safari and Chrome
 }
 
 .scroll__ipad {
