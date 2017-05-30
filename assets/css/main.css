@@ -99,11 +99,12 @@ img.kindles{
   z-index: 1;
   top: 0;
   left: 0;
-  transition: 120s;
+  transition-delay: 120s;
 }
 img.kindles:hover{
   transition: 1s;
   opacity: 0;
+  visibility: hidden;
 }
 .kindle p{
   font-family: "Times New Roman", Times, serif;
@@ -127,11 +128,12 @@ img.kindless{
   z-index: 1;
   top: 0;
   left: 0;
-  transition: 120s;
+  transition-delay: 120s;
 }
 img.kindless:hover{
   transition: 1s;
   opacity: 0;
+  visibility: hidden;
 }
 .kindle1 p{
   font-family: "Times New Roman", Times, serif;
@@ -167,17 +169,21 @@ background-color: white;
 
 }
 img.ipads{
-  transition: 120s;
+
+  transition-delay:120s;
   width: 100%;
      height: 100%;
      top: 0%;
      left: 0%;
      position: absolute;
      z-index: 1;
+     visibility: visible;
 }
 img.ipads:hover{
-  transition: 0.5s;
+  pointer-events: none;
+  transition: 0.1s;
   opacity: 0;
+visibility: hidden;
 }
 
 
@@ -207,7 +213,7 @@ img.ipads:hover{
   background-image: url(tvb.jpg);
 }
 img.tvs{
-  transition: 120s;
+  transition-delay: 120s;
   width: 100%;
      height: 100%;
      top: 0%;
@@ -216,8 +222,10 @@ img.tvs{
      z-index: 1;
 }
 img.tvs:hover{
-  transition: 1s;
+  pointer-events: none;
+  transition: 0.1s;
   opacity: 0;
+  visibility: hidden;
 }
 .tv p{
   font-family: arial;
@@ -228,6 +236,13 @@ img.tvs:hover{
   padding: 50px;
 
 }
+.tv h4{
+  text-align: center;
+border: solid;
+background-color: black;
+color:white;
+}
+
 
 .scroll__tv1 {
   width: 922px;
@@ -248,4 +263,88 @@ img.tvs:hover{
 .tv1 a{
   padding: 50px;
 
+}
+
+.l__image{
+  width: 10%;
+}
+.ll__image{
+  width: 10%;
+}
+.h__image{
+  width: 10%;
+}
+
+
+.rollover{
+
+  color:blue;
+}
+.rollover:hover{
+
+  color:black;
+}
+.rollovered
+{
+  position: fixed;
+
+  display:none;
+
+  pointer-events: none;
+
+}
+
+
+.rollovered.showme{
+  display: block;
+  opacity: 1;
+  transition:all 2s;
+
+}
+.db{
+  display: block;
+
+}
+.db.hide{
+  display:none;
+}
+
+.op{
+  opacity: 0;
+}
+.op.hide{
+  opacity: 1;
+
+}
+.v{
+  visibility:visible;
+}
+.v.hide{
+  visibility:hidden;
+}
+.blur{
+  position: fixed;
+  opacity: 0;
+  filter: blur(20px);
+  transition:all 0.5s;
+  pointer-events: none;
+}
+.blur.showme{
+  opacity: 1;
+  transition: all 0.5s;
+  filter:blur(0px);
+}
+.rotate{
+  position: fixed;
+  opacity: 0;
+  transition:scale(0) rotate(0deg);
+  transition: all 1s;
+  pointer-events: none;
+  left:-200px;
+}
+.rotate.showme{
+  transform:scale(1) rotate(360deg);
+  opacity: 1;
+  transition: all 1s;
+  left:200px;
 }
