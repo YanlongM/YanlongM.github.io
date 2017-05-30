@@ -14,6 +14,7 @@ body{
 
 }
 
+
 .devices {
   position: relative;
   background-size: contain;
@@ -134,8 +135,21 @@ height: 578px;
 top: 80px;
 left: 88px;
 padding: 20px;
+position: relative;
 background-color: white;
 }
+img.ipads{
+  width: 100%;
+     height: 100%;
+     top: 0%;
+     left: 0%;
+     position: absolute;
+     z-index: 1;
+}
+img.ipads:hover{
+  opacity: 0;
+}
+
 
 .ipad h1 {
   font-family: arial black;
@@ -156,9 +170,22 @@ background-color: white;
   height: 521px;
   top: 37px;
   left: 39px;
-  padding: 20px;
-  background-color: blue;
-  color:white;
+  padding: 161px;
+  position: relative;
+  background-color: white;
+  color:black;
+  background-image: url(tvb.jpg);
+}
+img.tvs{
+  width: 100%;
+     height: 100%;
+     top: 0%;
+     left: 0%;
+     position: absolute;
+     z-index: 1;
+}
+img.tvs:hover{
+  opacity: 0;
 }
 .tv p{
   font-family: arial;
@@ -169,10 +196,7 @@ background-color: white;
   padding: 50px;
 
 }
-.tv img{
 
-  width:8%;
-}
 .scroll__tv1 {
   width: 922px;
   height: 521px;
